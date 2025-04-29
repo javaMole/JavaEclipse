@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 
 import com.nit.entity.Phone;
 import com.nit.service.IService;
-@Component
+//@Component
 public class MyRunner implements CommandLineRunner {
 	@Autowired
 	private IService service;

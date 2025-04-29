@@ -22,4 +22,9 @@ public class ServiceImpl implements IService {
 	
 	}
 
+	@Override
+	public List<Phone> showAllPhones() {
+			return repo.findAll();
+	}
+
 }
