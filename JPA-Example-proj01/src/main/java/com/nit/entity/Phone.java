@@ -14,12 +14,12 @@ import lombok.RequiredArgsConstructor;
 @Entity
 @Data
 @RequiredArgsConstructor
-@Table(name="JPA_Phone")
+@Table(name="JPA_Phone2")
 @NoArgsConstructor
 public class Phone {
 	
 	@Id
-	@SequenceGenerator(name="gen1",sequenceName="SEQ_Phone",initialValue =1,allocationSize = 1)
+	@SequenceGenerator(name="gen1",sequenceName="SEQ_Phone3",initialValue =1,allocationSize = 1)
 	@GeneratedValue(generator="gen1",strategy=GenerationType.SEQUENCE)
 	private Integer id;
 	

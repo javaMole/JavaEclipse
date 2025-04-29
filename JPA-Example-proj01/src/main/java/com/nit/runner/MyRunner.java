@@ -2,6 +2,7 @@ package com.nit.runner;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -9,13 +10,13 @@ import com.nit.entity.Phone;
 import com.nit.service.IService;
 @Component
 public class MyRunner implements CommandLineRunner {
-	
+	@Autowired
 	private IService service;
 	@Override
 	public void run(String... args) throws Exception {
 		
 		try {
-			
+System.out.println("Hello");
 		
 		List<String> phonesAdded=service.addPhonesbatch(List.of(
 				new Phone("Iphone-6", "Apple", 30000.0),
@@ -35,7 +36,7 @@ public class MyRunner implements CommandLineRunner {
 		}
 		catch(Exception e)
 		{
-			
+			e.printStackTrace();
 		}
 		
 	}
