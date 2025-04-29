@@ -8,6 +8,7 @@ public class BootMvcMiniCrudApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BootMvcMiniCrudApplication.class, args);
+		
 	}
 
 }
