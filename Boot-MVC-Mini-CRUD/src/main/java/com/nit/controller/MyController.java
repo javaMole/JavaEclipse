@@ -86,6 +86,7 @@ public class MyController {
 		String message = service.deleteStudent(id);
 		attribute.addFlashAttribute("message", message);
 
+		
 		return "redirect:showReport";
 
 	}
