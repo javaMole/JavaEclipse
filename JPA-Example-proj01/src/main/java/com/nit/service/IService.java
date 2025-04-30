@@ -15,4 +15,7 @@ public interface IService {
 	public List<Phone> showAllPhonesByProperty(Example<Phone> example);
 
 	public List<Phone> showAllPhonesByPropertyPriceOrder(boolean asc,String... properties);
+	
+	public Phone getPhoneByLazyLoading(Integer id);
+	
 }

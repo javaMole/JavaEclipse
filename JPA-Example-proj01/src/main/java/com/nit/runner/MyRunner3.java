@@ -15,7 +15,7 @@ public class MyRunner3 implements CommandLineRunner {
 	@Override
 	public void run(String... args) throws Exception {
 		
-			try {
+			/*try {
 				
 				Phone phone=new Phone();
 				phone.setCompany("Samsung");
@@ -26,6 +26,16 @@ public class MyRunner3 implements CommandLineRunner {
 				// TODO: handle exception
 				e.printStackTrace();
 			}
-	}
-
+	}*/
+		
+		try {
+			
+		String message=	service.getPhoneByLazyLoading(7).toString();
+		System.out.println(message);
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+		
+}
 }

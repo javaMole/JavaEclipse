@@ -45,4 +45,14 @@ public class ServiceImpl implements IService {
 					return repo.findAll(Example.of(phone), sort);
 	}
 
+	@Override
+	public Phone getPhoneByLazyLoading(Integer id) {
+
+	Phone ph=	repo.getReferenceById(id);
+		
+		return ph;
+	}
+	
+	
+
 }
