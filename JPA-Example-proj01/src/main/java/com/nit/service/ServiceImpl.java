@@ -3,6 +3,7 @@ package com.nit.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Example;
 import org.springframework.stereotype.Service;
 
 import com.nit.entity.Phone;
@@ -25,6 +26,12 @@ public class ServiceImpl implements IService {
 	@Override
 	public List<Phone> showAllPhones() {
 			return repo.findAll();
+	}
+
+	@Override
+	public List<Phone> showAllPhonesByProperty(Example<Phone> example) {
+		
+		return repo.findAll(example);
 	}
 
 }
