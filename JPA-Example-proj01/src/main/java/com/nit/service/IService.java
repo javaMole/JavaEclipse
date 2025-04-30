@@ -13,4 +13,6 @@ public interface IService {
 	public List<Phone>  showAllPhones();
 	
 	public List<Phone> showAllPhonesByProperty(Example<Phone> example);
+
+	public List<Phone> showAllPhonesByPropertyPriceOrder(boolean asc,String... properties);
 }

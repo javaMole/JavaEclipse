@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Example;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.nit.entity.Phone;
@@ -32,6 +33,16 @@ public class ServiceImpl implements IService {
 	public List<Phone> showAllPhonesByProperty(Example<Phone> example) {
 		
 		return repo.findAll(example);
+	}
+
+	@Override
+	public List<Phone> showAllPhonesByPropertyPriceOrder(boolean asc, String... properties) {
+			
+			Sort sort=Sort.by(asc?Sort.Direction.ASC:Sort.Direction.DESC,"price");
+		Phone phone=new Phone();
+		phone.setCompany("Samsung");
+			
+					return repo.findAll(Example.of(phone), sort);
 	}
 
 }

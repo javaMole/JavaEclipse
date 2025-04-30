@@ -19,11 +19,12 @@ public class MyRunner3 implements CommandLineRunner {
 				
 				Phone phone=new Phone();
 				phone.setCompany("Samsung");
-				
-				service.showAllPhonesByProperty(Example.of(phone)).forEach(System.out::println);;
+				System.out.println("Result : ");
+				service.showAllPhonesByPropertyPriceOrder(true).forEach(System.out::println);;
 				
 			} catch (Exception e) {
 				// TODO: handle exception
+				e.printStackTrace();
 			}
 	}
 
