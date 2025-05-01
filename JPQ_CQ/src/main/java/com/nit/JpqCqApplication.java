@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JpaProj02CustomQueryMethodApplication {
+public class JpqCqApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(JpaProj02CustomQueryMethodApplication.class, args);
+		SpringApplication.run(JpqCqApplication.class, args);
 	}
 
 }

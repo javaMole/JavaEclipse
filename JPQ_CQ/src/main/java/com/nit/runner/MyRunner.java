@@ -25,7 +25,8 @@ public class MyRunner implements CommandLineRunner {
 			new Tourist("Cristopher", "USA", "India"),
 			new Tourist("Jenifer", "UK", "Kashmir"),
 			new Tourist("Lawrence", "USA", "Bhutan")));
-		savedTouristList.forEach(System.out::println);
+		
+		System.out.println(savedTouristList.size() + " is added in the db  with id values : "+savedTouristList.stream().map(Tourist::getId).toList());
 	}
 
 }
